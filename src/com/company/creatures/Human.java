@@ -117,5 +117,25 @@ public class Human extends Animal {
                 break;
             }
         }
+        return hasFreeSpace;
     }
-}
+
+    public void removeCar(Car car) {
+        for (int i = 0; i < this.garage.length; i++){
+            if(this.garage[i] == car){
+                this.garage[i]= null;
+                break;
+            }
+        }
+    }
+
+    public void addCar(Car car) {
+        for( int i = 0; i <this.garage.length; i++){
+            if(this.garage[i] == null){
+                this.garage[i] = car;
+                break;
+            }
+        }
+    }
+
+    }
